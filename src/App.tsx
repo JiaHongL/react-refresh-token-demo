@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useRoutes } from "react-router-dom";
+import Layout from "./layout/Layout";
+import Home from "./pages/home/Home";
+import Login from "./login/Login";
+import Post from "./pages/post/Post";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  
+  let element = useRoutes([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "home",
+          element: <Home />,
+        },
+        { path: "post", element: <Post /> },
+      ],
+    },
+    { path: "login", element: <Login /> },
+    { path: "*", element: <Login /> },
+  ]);
+
+  return element;
 }
 
 export default App;

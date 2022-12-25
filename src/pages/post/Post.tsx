@@ -26,6 +26,7 @@ function Post() {
       setComments(res2.data);
     }
     apiCall();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

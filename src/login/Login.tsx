@@ -1,9 +1,23 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { Result } from "../models/result.dto";
+
+import { useAppDispatch } from "../_redux/hooks";
+import { useLoginMutation } from "../_redux/services/authService";
+import { useRegisterUserMutation } from "../_redux/services/userService";
+import { updateTokens } from "../_redux/slice/tokensSlice";
 
 function Login() {
-  
+  const navigate = useNavigate();
+
   const [username, setUsername] = useState("joe");
   const [password, setPassword] = useState("test");
+
+  const dispatch = useAppDispatch();
+
+  const [login] = useLoginMutation();
+  const [registerUser] = useRegisterUserMutation();
 
   function handleUsernameChange(event: React.ChangeEvent<HTMLInputElement>) {
     setUsername(event.target.value);
@@ -13,14 +27,27 @@ function Login() {
     setPassword(event.target.value);
   }
 
-  function login(e: React.SyntheticEvent) {
+  function submit(e: React.SyntheticEvent) {
     e.preventDefault();
-    console.log(username);
-    console.log(password);
+    login({
+      username,
+      password,
+    }).then((res) => {
+      if ("data" in res) {
+        dispatch(updateTokens(res.data.data));
+        navigate("/home");
+      } else if ("data" in res.error) {
+        alert((res.error.data as Result<any>).message);
+      }
+    });
   }
 
   function createAccount() {
-    console.log('createAccount');
+    registerUser({}).then((res) => {
+      if ("data" in res) {
+        alert(res.data.message);
+      }
+    });
   }
 
   return (
@@ -44,7 +71,7 @@ function Login() {
               <h3 className="text-2xl font-semibold text-gray-800">Sign In</h3>
               <p className="text-gray-500">Please sign in to your account.</p>
             </div>
-            <form onSubmit={login}>
+            <form onSubmit={submit}>
               <div className="space-y-5">
                 <div className="space-y-2">
                   <label className="text-sm font-medium tracking-wide text-gray-700">

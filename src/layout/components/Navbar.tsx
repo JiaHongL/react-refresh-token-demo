@@ -32,7 +32,7 @@ function NavBar({ profile, categories }: NavBarProps) {
     <div className="navbar bg-blue-500">
       <div className="flex-1">
         <a onClick={()=>navigate('/home')} className="btn-ghost btn text-xl normal-case text-white" href="">
-          ng-refresh-token-demo
+          react-refresh-token-demo
         </a>
         <ul className="menu menu-horizontal p-0 text-white">
           {categories.map((category) => (

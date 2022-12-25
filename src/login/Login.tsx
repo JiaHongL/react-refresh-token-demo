@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Result } from "../models/result.dto";
+import { Result } from "../_models/result.dto";
 
 import { useAppDispatch } from "../_redux/hooks";
 import { useLoginMutation } from "../_redux/services/authService";

@@ -5,7 +5,7 @@ import NavBar from "./components/Navbar";
 
 import { useGetCategoriesQuery } from "../_redux/services/categoriesService";
 import { useGetProfileQuery } from "../_redux/services/userService";
-import { UserInfoDto } from "../models/user-info.dto";
+import { UserInfoDto } from "../_models/user-info.dto";
 
 function Layout() {
 

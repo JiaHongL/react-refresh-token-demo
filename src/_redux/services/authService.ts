@@ -2,8 +2,8 @@ import { createApi } from "@reduxjs/toolkit/query/react";
 
 import customFetchBase from "./base/customFetchBase";
 
-import { Result } from "../../models/result.dto";
-import { TokensDto } from "../../models/tokens.dto";
+import { Result } from "../../_models/result.dto";
+import { TokensDto } from "../../_models/tokens.dto";
 
 // Define a service using a base URL and expected endpoints
 export const authApi = createApi({

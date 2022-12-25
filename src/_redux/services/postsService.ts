@@ -1,8 +1,8 @@
-import { PostItemDetailDto } from '../../models/post-item-detail.dto';
+import { PostItemDetailDto } from '../../_models/post-item-detail.dto';
 import { createApi } from "@reduxjs/toolkit/query/react";
-import { PostItemDto } from "../../models/post-item.dto";
+import { PostItemDto } from "../../_models/post-item.dto";
 
-import { Result } from "../../models/result.dto";
+import { Result } from "../../_models/result.dto";
 
 import customFetchBase from "./base/customFetchBase";
 

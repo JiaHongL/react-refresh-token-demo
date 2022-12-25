@@ -1,7 +1,7 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 
-import { Result } from "../../models/result.dto";
-import { UserInfoDto } from "../../models/user-info.dto";
+import { Result } from "../../_models/result.dto";
+import { UserInfoDto } from "../../_models/user-info.dto";
 
 import customFetchBase from "./base/customFetchBase";
 

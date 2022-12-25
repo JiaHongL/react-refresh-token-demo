@@ -7,8 +7,8 @@ import {
 
 import { Mutex } from "async-mutex";
 
-import { Result } from "../../../models/result.dto";
-import { TokensDto } from "../../../models/tokens.dto";
+import { Result } from "../../../_models/result.dto";
+import { TokensDto } from "../../../_models/tokens.dto";
 
 import { clearTokens, updateTokens } from "../../slice/tokensSlice";
 import { RootState } from "../../store";

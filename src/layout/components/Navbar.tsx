@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { UserInfoDto } from "../../models/user-info.dto";
+import { UserInfoDto } from "../../_models/user-info.dto";
 import { useAppDispatch } from "../../_redux/hooks";
 import { useDeleteUserMutation } from "../../_redux/services/userService";
 import { clearTokens } from "../../_redux/slice/tokensSlice";

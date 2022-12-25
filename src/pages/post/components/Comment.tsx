@@ -1,4 +1,4 @@
-import { CommentDto } from "../../../models/comment.dto";
+import { CommentDto } from "../../../_models/comment.dto";
 
 type CommentProps = {
   comment: CommentDto;

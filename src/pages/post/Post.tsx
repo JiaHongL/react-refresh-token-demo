@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 
 import Comment from "./components/Comment";
 
-import { CommentDto } from "../../models/comment.dto";
-import { PostItemDetailDto } from "../../models/post-item-detail.dto";
+import { CommentDto } from "../../_models/comment.dto";
+import { PostItemDetailDto } from "../../_models/post-item-detail.dto";
 
 import { useLazyGetCommentsQuery } from "../../_redux/services/commentsService";
 import { useLazyGetPostDetailQuery } from "../../_redux/services/postsService";

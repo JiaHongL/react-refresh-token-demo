@@ -1,6 +1,6 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
-import { CommentDto } from "../../models/comment.dto";
-import { Result } from "../../models/result.dto";
+import { CommentDto } from "../../_models/comment.dto";
+import { Result } from "../../_models/result.dto";
 
 import customFetchBase from './base/customFetchBase';
 

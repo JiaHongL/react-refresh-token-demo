@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+import Comment from "./components/Comment";
+
 import { CommentDto } from "../../models/comment.dto";
 import { PostItemDetailDto } from "../../models/post-item-detail.dto";
 
@@ -12,6 +14,7 @@ function Post() {
   const [comments, setComments] = useState<CommentDto[] | null>(null);
 
   const { postId } = useParams();
+  
   const [getPostDetail] = useLazyGetPostDetailQuery();
   const [getCommentsQuery] = useLazyGetCommentsQuery();
 
@@ -27,6 +30,7 @@ function Post() {
 
   return (
     <div>
+
       <div className="my-3 font-bold text-center text-4xl">{post?.title}</div>
 
       <p style={{ whiteSpace: "pre-wrap" }}>{post?.body}</p>
@@ -54,26 +58,17 @@ function Post() {
       <hr className="border-b-1 border-gray-300 my-4"/>
 
       <div className="w-full">
+
         <h3 className="mb-5 text-2xl">Comments</h3>
 
         <div className="grid w-full gap-2 px-4">
           {comments?.map((comment) => (
-            <div className="flex" key={comment.id}>
-              <div className="flex justify-center items-center flex-shrink-0">
-                <img
-                  className="h-8 w-8 rounded-full sm:h-10 sm:w-10"
-                  src={comment.user.avatar}
-                  alt=""
-                />
-              </div>
-              <div className="flex-1 rounded-lg border px-4 py-2 leading-relaxed sm:px-6 sm:py-4">
-                <strong>{comment.user.username}</strong>
-                <p className="text-sm">{comment.body}</p>
-              </div>
-            </div>
+            <Comment key={comment.id} comment={comment} />
           ))}
         </div>
+
       </div>
+
     </div>
   );
 }

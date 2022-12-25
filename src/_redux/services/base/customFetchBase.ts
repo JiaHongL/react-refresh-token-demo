@@ -30,7 +30,6 @@ const baseQuery = fetchBaseQuery({
   },
 });
 
-
 const customFetchBase: BaseQueryFn<
   string | FetchArgs,
   unknown,

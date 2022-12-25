@@ -9,8 +9,8 @@ import { UserInfoDto } from "../_models/user-info.dto";
 
 function Layout() {
 
-  const { data: profileData } = useGetProfileQuery(null);
-  const { data: categoriesData } = useGetCategoriesQuery(null);
+  const { data: profileData } = useGetProfileQuery();
+  const { data: categoriesData } = useGetCategoriesQuery();
 
   const profile = profileData?.data as UserInfoDto;
   const categories = categoriesData?.data || [];

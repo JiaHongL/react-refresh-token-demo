@@ -51,7 +51,7 @@ function Login() {
   }
 
   return (
-    <div className="relative bg-cover bg-center bg-no-repeat bg-gradient-to-b from-blue-500 to-blue-400 opacity-75">
+    <div className="relative bg-cover bg-center bg-no-repeat bg-gradient-to-b from-blue-500 to-blue-400">
       <div className="z-50 mx-0 min-h-screen justify-center sm:flex sm:flex-row">
         <div className="z-10 flex flex-col self-center p-10 sm:max-w-5xl xl:max-w-2xl">
           <div className="hidden flex-col self-start text-white lg:flex">
@@ -79,7 +79,7 @@ function Login() {
                   </label>
                   <input
                     id="username"
-                    className="w-full rounded-lg border border-gray-300 px-4 py-2 text-base focus:border-blue-400 focus:outline-none"
+                    className="w-full bg-white rounded-lg border border-gray-300 px-4 py-2 text-base focus:border-blue-400 focus:outline-none"
                     type="text"
                     placeholder="Enter your username"
                     value={username}
@@ -92,7 +92,7 @@ function Login() {
                   </label>
                   <input
                     id="password"
-                    className="w-full content-center rounded-lg border border-gray-300 px-4 py-2 text-base focus:border-blue-400 focus:outline-none"
+                    className="w-full bg-white content-center rounded-lg border border-gray-300 px-4 py-2 text-base focus:border-blue-400 focus:outline-none"
                     type="password"
                     placeholder="Enter your password"
                     value={password}

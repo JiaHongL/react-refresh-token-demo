@@ -2,6 +2,7 @@
   "name": "react-refresh-token-demo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jiahongl.github.io/react-refresh-token-demo",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
     "@testing-library/jest-dom": "^5.16.5",
@@ -13,6 +14,7 @@
     "@types/react-dom": "^18.0.10",
     "async-mutex": "^0.4.0",
     "daisyui": "^2.46.0",
+    "gh-pages": "^6.1.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
@@ -29,7 +31,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

@@ -13,7 +13,11 @@ import { TokensDto } from "../../../_models/tokens.dto";
 import { clearTokens, updateTokens } from "../../slice/tokensSlice";
 import { RootState } from "../../store";
 
-const baseUrl = `http://localhost:3000`;
+let baseUrl = `http://localhost:3000`;
+
+if (process.env.NODE_ENV === "production") {
+  baseUrl = `https://jwt-refresh-token-mock-backend.onrender.com`;
+}
 
 // Create a new mutex
 const mutex = new Mutex();

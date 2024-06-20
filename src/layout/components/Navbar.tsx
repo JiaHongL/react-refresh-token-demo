@@ -34,7 +34,7 @@ function NavBar({ profile, categories }: NavBarProps) {
         <a onClick={()=>navigate('/home')} className="btn-ghost btn text-xl normal-case text-white" href="">
           react-refresh-token-demo
         </a>
-        <ul className="menu menu-horizontal p-0 text-white">
+        <ul className="menu menu-horizontal p-0 text-white hidden md:flex">
           {categories.map((category) => (
             <li key={category}>
               <span>{category}</span>

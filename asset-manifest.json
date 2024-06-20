@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-refresh-token-demo/static/css/main.ac3bf3b9.css",
-    "main.js": "/react-refresh-token-demo/static/js/main.ce33a49e.js",
+    "main.css": "/react-refresh-token-demo/static/css/main.79c734e2.css",
+    "main.js": "/react-refresh-token-demo/static/js/main.086ca97b.js",
     "static/js/787.d6cbd76b.chunk.js": "/react-refresh-token-demo/static/js/787.d6cbd76b.chunk.js",
     "index.html": "/react-refresh-token-demo/index.html",
-    "main.ac3bf3b9.css.map": "/react-refresh-token-demo/static/css/main.ac3bf3b9.css.map",
-    "main.ce33a49e.js.map": "/react-refresh-token-demo/static/js/main.ce33a49e.js.map",
+    "main.79c734e2.css.map": "/react-refresh-token-demo/static/css/main.79c734e2.css.map",
+    "main.086ca97b.js.map": "/react-refresh-token-demo/static/js/main.086ca97b.js.map",
     "787.d6cbd76b.chunk.js.map": "/react-refresh-token-demo/static/js/787.d6cbd76b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac3bf3b9.css",
-    "static/js/main.ce33a49e.js"
+    "static/css/main.79c734e2.css",
+    "static/js/main.086ca97b.js"
   ]
 }
